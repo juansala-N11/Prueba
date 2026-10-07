@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bucle For</title>
+</head>
+<body>
+<script>
+    // Imprimir los números del 1 al 10
+    for(let i= 1; i <= 10; i++){
+        document.write(i + "<br>");
+    }
+
+    // Imprimir los números pares del 10 al 1
+    for(let j = 10; j >= 1; j--){
+            document.write(j + "<br>");
+        }
+
+        //Los numeros pares hasta el 20
+        for(i=2; i<=20; i+=2){
+            document.write(i + "<br>");
+        }
+
+        //Los números impares hasta el 20
+        for(i=1; i<=20; i+=2){
+            document.write(i + "<br>");
+        }
+
+        // Imprimir la tabla de multiplicar del 10, de un numero cualquiera 
+        let numero = parseInt(prompt("Ingrese un número para mostrar su tabla de multiplicar:"));
+        for(let i=1; i<=10; i++){
+            document.write(numero + " x " + i + " = " + (numero*i),"<br>");
+        }      
+
+        var cant= prompt("Cantidad de camisatesas a comprar:");
+
+        var a=0;
+        for(let i=1;i<=cant;i++){
+            let precio=parseFloat(prompt("Precio de la camiseta"));
+            a=a+precio;
+        }
+        document.write("El total a pagar es:"+a);
+    </script>
+</body>
+</html>

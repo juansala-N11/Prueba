@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de gastos</title>
+</head>
+<body>
+    <script>
+        let cont = 0;
+        let totalGastos = 0;
+
+        let gasto = parseFloat(prompt("Ingrese el valor del gasto (0 para finalizar): "));
+
+        while (gasto > 0) {
+            totalGastos += gasto;
+            cont++;
+
+            gasto = parseFloat(prompt("Ingrese otro gasto (0 para finalizar): "));
+        }
+
+        let promedio = 0;
+
+        if (cont > 0) {
+            promedio = totalGastos / cont;
+        }
+
+        
+        document.write("Valor total gastado: $", totalGastos.toFixed(2), "<br>");
+        
+    </script>
+</body>
+</html>

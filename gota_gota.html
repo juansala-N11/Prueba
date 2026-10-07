@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan de Pago Gota a Gota</title>
+</head>
+<body>
+<script>
+    
+    // Deuda inicial
+    let deuda = 800000;
+
+    // Interés mensual (20% de la deuda)
+    let interes = deuda * 0.20;
+
+    // Abono que realizará Pablito cada mes
+    let abono = parseFloat(prompt("Ingrese el valor que abonará cada mes a la deuda:"));
+
+    document.write("<h2>PLAN DE PAGO</h2>");
+    document.write("Deuda inicial: $" + deuda + "<br>");
+    document.write("Cuota mensual (20%): $" + interes + "<br><br>");
+
+    // Ciclo máximo de 12 meses
+    for(let mes = 1; mes <= 12; mes++){
+
+        // Si la deuda ya fue pagada, termina el ciclo
+        if(deuda <= 0){
+            document.write("<br>La deuda fue cancelada en el mes " + (mes - 1));
+            break;
+        }
+
+        // Se descuenta el abono realizado
+        deuda = deuda - abono;
+
+        // Evitar que la deuda quede negativa
+        if(deuda < 0){
+            deuda = 0;
+        }
+
+        document.write(
+            "Mes " + mes + ":" +
+            " Interés a pagar: $" + interes +
+            " Abono a capital: $" + abono +
+            " Deuda restante: $" + deuda +
+            "<br>"
+        );
+    }
+    // Si después de 12 meses aún debe dinero
+    if(deuda > 0){
+        document.write("<br>Después de 12 meses aún debe: $" + deuda);
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 5</title>
+</head>
+<body>
+
+<script>
+
+let compra = parseInt(prompt("Ingrese el valor de la compra:"));
+
+let descuento = 0;
+
+if(compra > 100000){
+    descuento = compra * 0.05;
+}
+
+let totalPagar = compra - descuento;
+
+document.write("Valor de la compra: $" + compra + "<br>");
+document.write("Descuento: $" + descuento + "<br>");
+document.write("Total a pagar: $" + totalPagar);
+
+</script>
+
+</body>
+</html>

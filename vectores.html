@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Declarar vectores
+        let aprendices=["Juan", "Pedro", "Maria", "Ana", "Luis"];
+
+        document.write(aprendices.join(" - ")+ "<br>");
+        document.write(aprendices.length+ "<br>");
+        document.write(aprendices[0] + "<br>");
+
+        // Agregar un elemento al final del vector
+        aprendices[5]="Camilo";
+        document.write(aprendices.join(" - ")+ "<br>");
+        aprendices.push("Tatiana", "Yorman", "Yusi", "Kilian");
+        document.write(aprendices.join(" - ")+ "<br>");
+
+    //     let guerreras=[];
+        
+    //     for(i=0;i<10;i++){
+    //         let guerrera=prompt("Ingrese el nombre de la guerrera");
+    //         guerreras.push(guerrera);
+    //     }
+    // document.write(guerreras.join(" - ")+ "<br>");
+
+    // // ordenar alfabéticamente A-Z
+    // ordenar=aprendices.sort();
+    // document.write(ordenar+"<br");
+
+    // Ordenar en reversa
+    // document.write(aprendices.reverse() + "<br>");
+
+    //Ordenar de la Z - A
+    document.write(aprendices.sort().reverse() + "<br>");
+    // document.write(ordenar + "<br>");
+
+    let numeros=[1,40,6,7,9,10,25,65];
+    document.write(numeros.join(" - ")+ "<br>");
+
+    // Ordenar Ascendente
+    numeros.sort(function(a,b){return a-b});
+    document.write(numeros.join(" - ")+"<br>");
+
+    // Ordenar Descendente
+    numeros.sort(function(a,b){return b-a});
+    document.write(numeros.join(" - ")+"<br>");
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1</title>
+</head>
+<body>
+    <script>
+        // Parseint es para convertir a enteros
+        let num1=parseInt(prompt("Ingrese numero 1:"));
+        let num2=parseInt(prompt("Ingrese numero 2:"));
+
+        let suma=num1+num2;
+        document.write(suma+"<br>"); 
+
+        // Validar la suma si es par
+
+        if(suma%2==0){
+            document.write("La suma es par"+"<br>");
+        }else{
+            document.write("La suma es impar"+"<br>");
+        }
+
+
+        // concidcional anidada
+        if (suma>=7){
+            document.write("Promocionado"+"<br>");
+        }else if(suma>=4 && suma<7){
+            document.write("Regular"+"<br>");
+        }else{
+            document.write("Reprobado"+"<br>");
+
+        }
+    </script>
+</body> 
+</html> 

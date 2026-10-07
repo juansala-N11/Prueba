@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asignacion de nivel</title>
+</head>
+<body>
+<script>
+
+    let name = prompt("Ingrese el nombre del candidato:");
+    let experience = parseInt(prompt("Ingrese los años de experiencia:"));
+    let score = parseInt(prompt("Ingrese el puntaje técnico:"));
+
+    let categoria;
+    if(experience >= 2){
+        if(score >= 80){
+            categoria = "Desarrollador Senior";
+        }else{
+            categoria = "Desarrollador Semi Senior";
+        }
+    }else if(score >= 70){
+        categoria = "Desarrollador Junior";
+    }else{
+        categoria = "Aprendiz de Desarrollo";
+    }
+    document.write("Nombre: " + name + "<br>");
+    document.write("Categoría asignada: " + categoria);
+</script>
+</body>
+</html>

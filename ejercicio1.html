@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 1</title>
+</head>
+<body>
+
+<script>
+
+let salario = parseInt(prompt("Ingrese el salario mensual:"));
+let horasTrabajadas = parseInt(prompt("Ingrese las horas trabajadas:"));
+
+let valorHora = salario / 240;
+let horasExtras = 0;
+let pagoExtras = 0;
+
+if(horasTrabajadas > 240){
+    horasExtras = horasTrabajadas - 240;
+    pagoExtras = horasExtras * (valorHora * 1.5);
+}
+
+let salarioNeto = salario + pagoExtras;
+
+document.write("Horas extras: " + horasExtras + "<br>");
+document.write("Pago horas extras: $" + pagoExtras + "<br>");
+document.write("Salario neto: $" + salarioNeto);
+
+</script>
+
+</body>
+</html>

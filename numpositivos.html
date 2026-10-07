@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let cont=0;
+        while(cont>=0){
+            let num=parseInt(prompt("Ingrese solo numeros positivos: "));
+            if(num<0){
+                num=prompt("Ingrese solo numeros positivos; Ingresa un nuevo numero: ");
+
+            }else if(num==0){
+                break;
+            }else{
+                cont=cont+1;
+            }  
+        }
+        document.write("Hay ", cont, " Números positivos");
+    </script>
+</body>
+</html>

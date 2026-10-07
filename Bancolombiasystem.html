@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bancolombia System</title>
+</head>
+<body>
+    <script>
+        let Saldo_inicial = 500000;
+        let alm = 0;
+        let opc = 0;
+
+        while (opc <= 3) {
+            opc = parseInt(prompt("Bienvenido al cajero\nElija una opción:\n1. Consultar saldo\n2. Retirar dinero\n3. Consignar dinero\n4. Salir"));
+
+            switch (opc) {
+                case 1:
+                    document.write("Su saldo actual es: $" , Saldo_inicial ,"<br>");
+                    break;
+                case 2:
+                    let retiro = parseInt(prompt("Ingrese el monto a retirar:"));
+                    if (retiro <= Saldo_inicial) {
+                        Saldo_inicial -= retiro;
+                        document.write("Retiro exitoso. Su nuevo saldo es: $" , Saldo_inicial ,"<br>");
+                    } else {
+                        document.write("Saldo insuficiente para realizar el retiro.<br>");
+                    }
+                    break;
+                case 3:
+                    let deposito = parseInt(prompt("Ingrese el monto a depositar:"));
+                    Saldo_inicial += deposito;
+                    document.write("Depósito exitoso. Su nuevo saldo es: $" , Saldo_inicial ,"<br>");
+                    break;
+                case 4:
+                    document.write("Gracias por usar Bancolombia. ¡Hasta luego!");
+                    break;
+               default:
+                    document.write("Opción no válida. Por favor, seleccione una opción del 1 al 4.<br>");
+            }
+        }
+    </script>
+</body>
+</html> 
